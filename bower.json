@@ -1,0 +1,19 @@
+{
+  "name": "angular2_New",
+  "version": "0.0.0",
+  "authors": [
+    "Pardeep Jain"
+  ],
+  "description": "startup project",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
