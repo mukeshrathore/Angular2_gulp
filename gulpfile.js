@@ -19,7 +19,8 @@ gulp.task('ts-lint', function() {
 gulp.task('compile-ts', function() {
 	var sourceTsFiles = [
 		config.allTs,
-		config.typings
+		config.typings,
+		config.components
 			
 	];
 	

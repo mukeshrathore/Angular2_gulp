@@ -1,4 +1,3 @@
-// TODO:vsavkin Use enums after switching to TypeScript
 import {StringWrapper, normalizeBool, isBlank} from 'angular2/src/core/facade/lang';
 
 export enum ChangeDetectionStrategy {
@@ -41,6 +40,16 @@ export enum ChangeDetectionStrategy {
    */
   OnPushObserve
 }
+
+export var CHANGE_DECTION_STRATEGY_VALUES = [
+  ChangeDetectionStrategy.CheckOnce,
+  ChangeDetectionStrategy.Checked,
+  ChangeDetectionStrategy.CheckAlways,
+  ChangeDetectionStrategy.Detached,
+  ChangeDetectionStrategy.OnPush,
+  ChangeDetectionStrategy.Default,
+  ChangeDetectionStrategy.OnPushObserve
+];
 
 export function isDefaultChangeDetectionStrategy(changeDetectionStrategy: ChangeDetectionStrategy):
     boolean {

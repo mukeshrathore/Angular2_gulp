@@ -1,0 +1,37 @@
+<style>
+	@import url(http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+</style>
+
+<!--<chart></chart>-->
+<!--<h1>Card component Done </h1>-->
+
+<div id="card">
+	
+	<div class="col-md-6"> {{category}}  </div>
+	<div class="col-md-2"><button (click)='closeFun()'>X</button></div>
+	<div class="col-md-2"><button (click)='displayFun()'>^</button></div>
+	<div class="col-md-2"><button (click)='refresh()'>$</button></div>
+	
+	<hr>
+	<div class="chartDraw" *ng-if="display">
+		{{category}}
+		<chart url="components/chart/chart.json" height="200" width="300" type="pie2d" *ng-if="category=='chart'"></chart>
+		<chart url="components/chart/chart.json" height="200" width="300" type="bar2d" *ng-if="category=='chart'"></chart>
+		<chart url="components/chart/chart.json" height="200" width="300" type="bar2d" *ng-if="category=='chart'"></chart>
+		<chart url="components/chart/chart.json" height="200" width="300" type="pie2d" *ng-if="category=='chart'"></chart>
+		<chart url="components/chart/chart.json" height="200" width="300" type="pie2d" *ng-if="category=='chart'"></chart>
+		
+		<Bcard name="pardeep" uid="1136125" type="student" *ng-if="category=='birthday'"></Bcard>
+		<cardNew></cardNew>
+		<!--<cardNew><Bcard name="jaito"></Bcard></cardNew>-->
+		<cardNew *ng-if="category=='student'"></cardNew>
+		
+		
+		
+		<!--<card></card>-->
+	</div>
+</div>
+
+
+	<!--<div id="downdiv" [style.display]="divv.value"></div>-->
+	<!--<input #divv (keyup)="fun()">{{divv.value}}-->

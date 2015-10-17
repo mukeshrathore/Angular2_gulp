@@ -4,7 +4,7 @@ import {
   PostMessageBusSource
 } from 'angular2/src/web_workers/shared/post_message_bus';
 import {MessageBus} from 'angular2/src/web_workers/shared/message_bus';
-import {BaseException} from 'angular2/src/core/facade/lang';
+import {BaseException, WrappedException} from 'angular2/src/core/facade/exceptions';
 import {bootstrapUICommon, WebWorkerApplication} from 'angular2/src/web_workers/ui/impl';
 export {WebWorkerApplication} from 'angular2/src/web_workers/ui/impl';
 export * from 'angular2/src/web_workers/shared/message_bus';
@@ -33,7 +33,7 @@ export function spawnWebWorker(uri: string): WebWorkerInstance {
 
 /**
  * Wrapper class that exposes the {@link WebWorkerApplication}
- * Isolate instance and underyling {@link MessageBus} for lower level message passing.
+ * Isolate instance and underlying {@link MessageBus} for lower level message passing.
  */
 export class WebWorkerInstance {
   constructor(public app: WebWorkerApplication, public worker: Worker, public bus: MessageBus) {}

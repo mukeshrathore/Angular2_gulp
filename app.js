@@ -1,4 +1,4 @@
-/// <reference path="typings/tsd.d.ts" />
+/// <reference path="node_modules/angular2/typings/tsd.d.ts" />
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
     switch (arguments.length) {
@@ -11,21 +11,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
+var router_1 = require('angular2/router');
+var home_1 = require('components/home/home');
+var school_1 = require('components/school/school');
 var App = (function () {
     function App() {
+        this.myFun = function () {
+            alert("fsfs");
+            document.getElementById("ctext").innerHTML = "fdssdf";
+        };
+        this.clickToggle = function () {
+            $("#wrapper").toggleClass("toggled");
+        };
+        this.toggleSub = function () {
+        };
     }
     App = __decorate([
         angular2_1.Component({
             selector: 'app'
         }),
         angular2_1.View({
-            templateUrl: 'app.html'
-        }), 
+            templateUrl: 'app.html',
+            directives: [router_1.ROUTER_DIRECTIVES]
+        }),
+        router_1.RouteConfig([
+            { path: '/', as: 'School', component: school_1.School },
+            { path: '/Home', as: 'Home', component: home_1.Home }
+        ]), 
         __metadata('design:paramtypes', [])
     ], App);
     return App;
 })();
 exports.App = App;
-angular2_1.bootstrap(App);
+angular2_1.bootstrap(App, [router_1.ROUTER_PROVIDERS]);
 
 //# sourceMappingURL=app.js.map

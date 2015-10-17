@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Angular2 playground</title>
-<link rel="import" href="bower_components/core-drag-drop/core-drag-drop.html">
-<link rel="import" href="bower_components/core-dropdown/core-dropdown.html">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <base href="/"></base>
 
-    <!--<chart></chart>-->
+
+<!--<link rel="import" href="bower_components/paper-tabs-master/paper-tabs.html">-->
+
 <!-- ES6-related imports -->
 <script src="javascript/traceur-runtime.js"></script>
 <script src="javascript/system.js"></script>
  
+<script src="bower_components/jquery/dist/jquery.js"></script>
+
+
 <script>
     //configure system loader
     System.config({
@@ -26,17 +33,29 @@
     });
 </script>
 <!-- Angular2 import -->
-<script src="javascript/angular2.min.js"></script>
-<script src="javascript/http.js"></script>
+<script src="node_modules/angular2/bundles/angular2.min.js"></script>
+<script src="node_modules/angular2/bundles/http.js"></script>
 
-<script src="javascript/router.dev.js"></script>
+<script src="node_modules/angular2/bundles/router.dev.js"></script>
+
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+<script src="bower_components/webcomponentsjs/webcomponents.js"></script> 
+<!--<script src="bower_components/polymer/polymer.js"></script>-->
+
+
+
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/simple-sidebar.css">
+
+<link rel="import" href="bower_components/paper-card-master/paper-card.html">
+
+<!--<link rel="import" href="bower_components/paper-drawer-panel-master/paper-drawer-panel.html">-->
 
 </head>
 
 <body>
-    <app></app>
-    
-    <core-drag-drop></core-drag-drop>
+    <app></app> 
 <script>
     //bootstrap the Angular2 application
     System.import('app').catch(console.log.bind(console));

@@ -1,0 +1,20 @@
+*{margin: 0px}
+
+h1{
+	color: red;
+}
+
+#card{
+	height: auto;
+	width: 300px;
+	background-color: #e2e2e2;
+	float: left;
+	margin:  10px;
+}
+
+.chartDraw{
+    height: auto;
+	width: 300px;
+	background-color: green;
+	/*position: absolute;*/
+}

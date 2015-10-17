@@ -15,5 +15,14 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "paper-button": "polymer/paper-button#~0.5.6",
+    "polymer": "Polymer/polymer#^1.1.0"
+  },
+  "devDependencies": {
+    "angular": "angular2#~1.4.7",
+    "bootstrap": "~3.3.5",
+    "jquery": "jQuery#~2.1.4"
+  }
 }
